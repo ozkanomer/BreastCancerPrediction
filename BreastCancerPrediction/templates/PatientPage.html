@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<style>
+    .btn:hover {
+        cursor: pointer;
+    }
+</style>
+
+<h3 class="mt-5">Test Entry Panel</h3>
+
+<hr>
+
+<div class="row" style="margin-top: 35px;">
+    <div class="col-lg-6 m-auto">
+        <div class="card mb-5" style="background-color: #e9ece0; padding: 15px;">
+            <div class="card-title">
+                <h2 class="text-center py-2">Entry Form</h2>
+                <hr style="border: 1px solid black;">
+            </div>
+            <div class="card-body">
+
+                <!-- Entry Form -->
+                {% from '/includes/formhelpers.html' import render_field %}
+                <form action="" method="POST">
+                    
+
+                    <!-- symptom Field -->
+                    {{ render_field(form.symptom, class="form-control") }}
+
+                    <!-- Clump_Thickness -->
+                    {{ render_field(form.Clump_Thickness, class="form-control") }}
+
+                    <!-- uCell_Size -->
+                    {{ render_field(form.uCell_Size, class="form-control") }}
+
+                    <!-- Cell_Shape -->
+                    {{ render_field(form.Cell_Shape, class="form-control") }}
+
+                    <!-- Adhesion -->
+                    {{ render_field(form.Adhesion, class="form-control") }}
+
+                    <!-- sCell_Size -->
+                    {{ render_field(form.sCell_Size, class="form-control") }}
+
+                    <!-- Bare_Nuclei -->
+                    {{ render_field(form.Bare_Nuclei, class="form-control") }}
+
+                    <!-- Bland_Chromatin -->
+                    {{ render_field(form.Bland_Chromatin, class="form-control") }}
+
+                    <!-- Normal_Nucleoli -->
+                    {{ render_field(form.Normal_Nucleoli, class="form-control") }}
+
+                    <!-- Mitoses -->
+                    {{ render_field(form.Mitoses, class="form-control") }}
+
+
+                    <button type="submit" class="btn btn-info"> Submit </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

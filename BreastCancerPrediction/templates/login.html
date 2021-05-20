@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <style>
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        /* Login Card Shadow */
+        .card {
+            -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        /* Button Shadow */
+        .btn {
+            -webkit-box-shadow: 3px 3px 11px -4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 11px -4px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 11px -4px rgba(0,0,0,0.75);
+        }
+
+    </style>
+    
+    <div class="row" style="margin-top: 35px;">
+        <div class="col-lg-6 m-auto">
+            <div class="card" style="background-color: #e9ece0; padding: 15px;">
+                <div class="card-title">
+                    <h2 class="text-center py-2">Login Form</h2>
+                    <hr style="border: 1px solid black;">
+                </div>
+                <div class="card-body">
+                    <!-- Login Form -->
+                    {% from '/includes/formhelpers.html' import render_field %}
+                    <form action="" method="POST">
+
+                        <!-- User ID Field -->
+                        {{ render_field(form.username, class="form-control") }}
+                        <!-- User Password Field -->
+                        {{ render_field(form.password, class="form-control") }}
+
+                        <button type="submit" class="btn btn-info"> Submit </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

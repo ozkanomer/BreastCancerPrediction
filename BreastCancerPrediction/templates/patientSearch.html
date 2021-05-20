@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+    .btn:hover {
+        cursor: pointer;
+    }
+</style>
+
+    <h3 class="mt-5">Choose Patient Before Entering the Test </h3>
+    <hr>
+
+    <form action="" method="POST">
+        <div class="mt-5" style="display: flex;">
+            <input style="margin: 10px;" type="radio" name="searchBy" value="name">
+            <label style="margin: 10px;" for="name">Search by Name</label><br>
+            <input style="margin: 10px;" type="radio" name="searchBy" value="Tc">
+            <label style="margin: 10px;" for="Tc">Search by ID</label><br>    
+        </div>
+        <br>
+        <div style="display: flex;">
+            <input class="form-control" type="search" name="searchBox" id="" placeholder="Search Patients...">
+
+            <button class="btn btn-primary ml-2" type="submit"> Search </button>
+        </div>
+    </form>
+
+    {% if patients %}
+        <hr>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">City</th>
+                <th scope="col">Diagnosis</th>
+                <th scope="col">Test Count</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                
+                <!-- Show Patients -->
+                {% for patient in patients %}
+                    <tr>
+                        <th scope="row">{{ patient.patient_Tc }}</th>
+                        <td>{{ patient.patient_Name }}</td>
+                        <td>{{ patient.patient_age }}</td>
+                        <td>{{ patient.patient_City }}</td>
+                        <td>{{ patient.patient_Diagnosis }}</td>
+                        <td>{{ patient.patient_TestCount }}</td>
+                        <td><a class="btn btn-danger" href="/addTest/{{patient.patient_Tc}}">Add Test</a></td>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+          </table>
+    {% else %}
+        <hr>
+        <div class="alert alert-info mt-3"> You must search a patient before entering a test. </div>
+    {% endif %}
+{% endblock body %}

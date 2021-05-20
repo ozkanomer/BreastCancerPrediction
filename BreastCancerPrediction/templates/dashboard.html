@@ -1,0 +1,46 @@
+<!-- Extend layout -->
+{% extends "layout.html" %}
+
+<!-- Body -->
+{% block body %}
+
+    <div class="row">
+        <div class="col-lg-8 m-auto">
+            <div class="card">
+                <div class="card-title">
+                    <h3 class="text-center mt-3">Total Statistics</h3>
+                    <hr style="border: 1px solid black; width: 90%;">
+                </div>
+                <div class="card-body" >
+                    <br><br>
+                    <h1 style="font-size: 24px;" class="text-center">Total Test</h1>
+                    <table class="table table-hover m-auto">
+                        <thead>
+                          <tr style="background-color: rgb(211, 211, 230);">
+                            <th scope="col">General</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Malignant</th>
+                            <th scope="col">Benign</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Patients</th>
+                            <td>{{malignant + benign}}</td>
+                            <td>{{malignant}}</td>
+                            <td>{{benign}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <br><br>
+                      <hr style="border: 1px solid black; width: 90%;">
+                      <br><br>
+
+                      {% include "figure.html" %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

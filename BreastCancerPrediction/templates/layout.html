@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }}</title>
+
+    <!-- Link Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style>
+        li:hover {
+            opacity: 0.7;
+        }
+
+        hr {
+            -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        footer {
+            position: fixed;
+            display: block;
+            text-align: center;
+            background-color: black;
+            color: white;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+        }
+
+        footer i{
+            font-size: x-large;
+            margin: 10px 5px 5px 5px;
+        }
+    </style>
+
+</head>
+<body style="background-color: #e9ecef;">
+    
+    <!-- Navbar -->
+    {% include "/includes/navbar.html" %}
+    <br><br><br>
+
+    <!-- Body Block -->
+    <div class="container">
+
+        <!-- Flash Messages -->
+        {% include "includes/messages.html" %}
+
+        <!-- Body -->
+        {% block body %}
+    
+        {% endblock %}   
+    </div>
+    
+   
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>

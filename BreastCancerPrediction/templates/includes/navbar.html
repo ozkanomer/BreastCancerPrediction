@@ -1,0 +1,46 @@
+<style>
+  nav {
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  }
+</style>
+
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand font-weight-bold" href="/">BCP Panel</a>
+    
+    <div class="collapse navbar-collapse" id="navbarCollapse" >
+      <ul class="navbar-nav mr-auto">
+        {% if session["logged_in"] %}
+        <li class="nav-item active">
+            <a class="nav-link" href="/dashboard"><i class="fas fa-chart-line"></i>  Dashboard</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="/data_entry"><i class="fas fa-database"></i>  Data Entry</a>
+          </li> 
+        {% else %}
+            
+        {% endif %}
+    </ul>
+
+      <ul class="navbar-nav ml-auto">
+
+          {% if session["logged_in"] %}
+          <li class="nav-item active">
+              <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i>  Log Out</a>
+            </li>
+            
+          {% else %}
+          <li class="nav-item active">
+              <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i>  Log In</a>
+            </li>
+
+          {% endif %}
+        </ul>
+    </div>
+
+
+  </nav>

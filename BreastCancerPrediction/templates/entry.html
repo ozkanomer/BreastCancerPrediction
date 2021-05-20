@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+    .btn:hover {
+        cursor: pointer;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .link {
+        color: white;
+        width: 120px;
+    }
+
+    .link:hover{
+        color: white;
+    }
+
+    .btn {
+        -webkit-box-shadow: 3px 3px 11px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 3px 11px -4px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 11px -4px rgba(0,0,0,0.75);
+    }
+
+    .card-body {
+        justify-content: space-between;
+    }
+
+</style>
+
+<h3 class="mt-5">Data Entry Panel</h3>
+<small>Welcome, {{name}}</small>
+<hr>
+
+<div class="row" style="margin-top: 35px; margin-bottom: 100px;">
+    <div class="col-lg-6 m-auto">
+        <div class="card mb-5" style="background-color: #e9ece0; padding: 15px;">
+            <div class="card-title">
+                <h2 class="text-center py-2">Choose Entry Type</h2>
+                <hr style="border: 1px solid black;">
+            </div>
+            <div class="card-body">
+                <a class="link btn btn-info ml-5" href="patientEntry"> Patient Entry </a>
+                <br>
+                <a class="link btn btn-danger ml-5 mt-2" href="patientSearch"> Test Entry </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

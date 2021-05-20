@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+    .btn:hover {
+        cursor: pointer;
+    }
+</style>
+
+<div class="row" style="margin-top: 35px;">
+    <div class="col-lg-6 m-auto">
+        <div class="card mb-5" style="background-color: #e9ece0; padding: 15px;">
+            <div class="card-title">
+                <h2 class="text-center py-2">Entry Form</h2>
+                <hr style="border: 1px solid black;">
+            </div>
+            <div class="card-body">
+
+                <!-- Entry Form -->
+                {% from '/includes/formhelpers.html' import render_field %}
+                <form action="" method="POST">
+                    
+                <!-- symptom Field -->
+                {{ render_field(form.patientTc, class="form-control") }}
+                {{ render_field(form.patientName, class="form-control") }}
+                {{ render_field(form.patientAge, class="form-control") }}
+                {{ render_field(form.patientCity, class="form-control") }}
+
+                <button type="submit" class="btn btn-info"> Submit </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

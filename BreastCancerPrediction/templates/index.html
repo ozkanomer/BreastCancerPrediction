@@ -1,0 +1,114 @@
+<!-- Home Page -->
+
+{% extends "layout.html" %}
+
+{% block body %}
+    <h3 class="font-weight-bold" style="margin-left: 15px; text-align: center; margin-top: 15px;">About This Study</h3>
+    <hr style="width: 90%; border: 1px solid black; border-radius: 3px;">
+    <div class="container mb-5 mt-5 p-5" style="background-color: white; justify-content: center; border: 1px solid grey; border-radius: 6px;">
+        <p>
+            <strong>This study about breast cancer prediction with machine learning.</strong>
+        </p>
+        <br><br>
+
+        <!-- About Breast Cancer Section -->
+        <h3>What is breast cancer?</h3>
+        <hr class="mt-2">
+        <p>
+            Breast cancer is a disease in which cells in the breast grow out of control. There are different kinds of breast cancer. The kind of breast cancer depends on which cells in the breast turn into cancer.
+            Breast cancer can begin in different parts of the breast. A breast is made up of three main parts: lobules, ducts, and connective tissue. The lobules are the glands that produce milk. The ducts are tubes that carry milk to the nipple. The connective tissue (which consists of fibrous and fatty tissue) surrounds and holds everything together. Most breast cancers begin in the ducts or lobules.
+            Breast cancer can spread outside the breast through blood vessels and lymph vessels. When breast cancer spreads to other parts of the body, it is said to have metastasized.
+        </p>
+        <br>
+        <div style="display: flex; justify-content: space-evenly;">
+            <div>
+                <img src="https://www.cdc.gov/cancer/breast/images/breast2_200_296.jpg" alt="Figure1">
+            </div>
+            <div>
+                <img src="https://www.cdc.gov/cancer/breast/images/breast1_200_296.jpg" alt="Figure2">
+            </div>
+        </div>
+
+        <!-- Kinds of Breast Cancer -->
+        <br>
+        <h5>Kinds of Breast Cancer</h5>
+        <p>The most common kinds of breas cancer are:
+            <br>
+            <ul>
+                <li><b>Invasive ductal carcinoma.</b>
+                    The cancer cells grow outside the ducts into other parts of the breast tissue. Invasive cancer cells can also spread, or metastasize, to other parts of the body.</li>
+                    
+                <li>
+                    <b>Invasive lobular carcinoma.</b>
+                    Cancer cells spread from the lobules to the breast tissues that are close by. These invasive cancer cells can also spread to other parts of the body.
+                </li>
+            </ul>
+        </p>
+        
+        <br>
+        <!-- Symptoms of Breast Cancer -->
+        <h5>Symptoms of Breast Cancer</h5>
+        <div style="justify-content: center; display: flex;">
+            <img src="https://www.sistersinhealth.com/wp-content/uploads/2015/10/breast-cancer-symptoms.jpg" alt="Figure3" style="width: 50%;">
+        </div>
+        <p>Different people have different symptoms of breast cancer. Some people do not have any signs or symptoms at all.Some warning signs of breast cancer are :</p>
+        
+        <ul>
+            <li>New lump in the breast or underarm (armpit).</li>
+            <li>Thickening or swelling of part of the breast.</li>
+            <li>Irritation or dimpling of breast skin.</li>
+            <li>Redness or flaky skin in the nipple area or the breast.</li>
+            <li>Pulling in of the nipple or pain in the nipple area.</li>
+            <li>Nipple discharge other than breast milk, including blood.</li>
+            <li>Any change in the size or the shape of the breast.</li>
+            <li>Pain in any area of the breast.</li>
+        </ul>
+        <p>Keep in mind that these symptoms can happen with other conditions that are not cancer.</p>
+
+        <!-- Risk factors -->
+        <br>
+        <h5>What Are the Risk Factors for Breast Cancer?</h5>
+        <div style="display: flex; justify-content: center;">
+            <img class="m-2" style="width: 50%;" src="https://www.verywellhealth.com/thmb/duSedpYOirb6UXo2zLy_cu2rKQs=/2501x2501/smart/filters:no_upscale()/causes-and-signs-of-breast-cancer-in-women-of-all-ages-513575_V1-967d10c079164937a4498b0d0e68fa5a.png" alt="">
+        </div>
+        <p>Studies have shown that your risk for breast cancer is due to a combination of factors. The main factors that influence your risk include being a woman and getting older. Most breast cancers are found in women who are 50 years old or older.
+
+            Some women will get breast cancer even without any other risk factors that they know of. Having a risk factor does not mean you will get the disease, and not all risk factors have the same effect. Most women have some risk factors, but most women do not get breast cancer. If you have breast cancer risk factors, talk with your doctor about ways you can lower your risk and about screening for breast cancer.</p>
+        
+        <h6><b>Risk Factors You Cannot Change:</b></h6>
+        <ul>
+            <li><b>Getting older.</b> The risk for breast cancer increases with age; most breast cancers are diagnosed after age 50.</li>
+            <li><b>Genetic mutations.</b> Inherited changes (mutations) to certain genes, such as BRCA1 and BRCA2. Women who have inherited these genetic changes are at higher risk of breast and ovarian cancer</li>
+            <li><b>Reproductive history.</b> Early menstrual periods before age 12 and starting menopause after age 55 expose women to hormones longer, raising their risk of getting breast cancer.</li>
+            <li><b>Having dense breasts.</b> Dense breasts have more connective tissue than fatty tissue, which can sometimes make it hard to see tumors on a mammogram. Women with dense breasts are more likely to get breast cancer.</li>
+            <li><b>Personal history of breast cancer or certain non-cancerous breast diseases.</b> Women who have had breast cancer are more likely to get breast cancer a second time. Some non-cancerous breast diseases such as atypical hyperplasia or lobular carcinoma in situ are associated with a higher risk of getting breast cancer.</li>
+            <li><b>Family history of breast or ovarian cancer.</b> A woman’s risk for breast cancer is higher if she has a mother, sister, or daughter (first-degree relative) or multiple family members on either her mother’s or father’s side of the family who have had breast or ovarian cancer. Having a first-degree male relative with breast cancer also raises a woman’s risk.</li>
+            <li><b>Previous treatment using radiation therapy.</b> Women who had radiation therapy to the chest or breasts (like for treatment of Hodgkin’s lymphoma) before age 30 have a higher risk of getting breast cancer later in life.</li>
+            <li><b>Women who took the drug diethylstilbestrol (DES)</b> Which was given to some pregnant women in the United States between 1940 and 1971 to prevent miscarriage, have a higher risk. Women whose mothers took DES while pregnant with them are also at risk.</li>
+        </ul>
+        <h6><b>Risk Factors You Can Change:</b></h6>
+        <ul>
+            <li><b>Not being physically active.</b> Women who are not physically active have a higher risk of getting breast cancer.</li>
+            <li><b>Being overweight or obese after menopause.</b> Older women who are overweight or obese have a higher risk of getting breast cancer than those at a normal weight.</li>
+            <li><b>Taking hormones.</b> Some forms of hormone replacement therapy (those that include both estrogen and progesterone) taken during menopause can raise risk for breast cancer when taken for more than five years. Certain oral contraceptives (birth control pills) also have been found to raise breast cancer risk.</li>
+            <li><b>Reproductive history.</b> Having the first pregnancy after age 30, not breastfeeding, and never having a full-term pregnancy can raise breast cancer risk.</li>
+            <li><b>Drinking alcohol.</b> Studies show that a woman’s risk for breast cancer increases with the more alcohol she drinks.</li>
+        </ul>
+
+        <!-- Risk Reduction -->
+        <br>
+        <h5>Some Ways to Reduce Breast Cancer Risk Factors</h5>
+        <div style="display: flex; justify-content: center;">
+            <img class="" style="width: 50%;" src="https://www.freevector.com/uploads/vector/preview/29115/Breast-Cancer-Prevention.jpg" alt="">
+        </div>
+        <p>Many factors over the course of a lifetime can influence your breast cancer risk. You can’t change some factors, such as getting older or your family history, but you can help lower your risk of breast cancer by taking care of your health in the following ways :</p>
+        <ul>
+            <li>Keep a healthy weight.</li>
+            <li>Exercise regularly.</li>
+            <li>Don’t drink alcohol, or limit alcoholic drinks.</li>
+            <li>If you are taking, or have been told to take, hormone replacement therapyexternal icon or oral contraceptivesexternal icon (birth control pills), ask your doctor about the risks and find out if it is right for you.</li>
+            <li>Breastfeed your children, if possible.</li>
+            <li>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</li>
+        </ul>
+    </div>
+{% endblock %}
